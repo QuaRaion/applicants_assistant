@@ -48,8 +48,6 @@ body {
 
 /* font-family: 'Montserrat', sans-serif; */
 /* HEADER */
-.header {
-}
 .nav {
     padding-top: 30px;
     display: flex;
@@ -98,7 +96,6 @@ body {
     }
 .meaning {
     color:var(--dark-color);
-    flex-direction: ;
     font-size: 25px;
     font-weight: 400;
     width: 483px;
@@ -126,6 +123,6 @@ body {
     height: 448px;
 }
 /* BODY */
-.main {
+/* .main {
 
-}
+} */
