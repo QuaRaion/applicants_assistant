@@ -1,2 +1,131 @@
+html {
+    box-sizing: border-box;
+}
+*,* ::before, *::after {
+    box-sizing: inherit;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: unset;
+}
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.container {
+    max-width: 1060px;
+    background-color: #e4effb;
+    margin: 0 auto;
+}
+:root {
+    --accent-color: #4182FA;
+    --dark-color: #2D2D2D;
+    --green-color: #4BD25F;
+    --yellow-color: #FFD644;
+    --red-color: #FF6745;
+}
+/* Текст-заголовок */
+.text-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    font-variant: small-caps;
+}
+/* Основной текст */
+.text-main {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+/* Текст в направлениях */
+.text-h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
 
 /* font-family: 'Montserrat', sans-serif; */
+/* HEADER */
+.header {
+}
+.nav {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 115px;
+}
+.logo {
+    width: 179px;
+    height: 38px;
+    cursor: pointer;
+}
+.inf {
+    color: var(--dark-color);
+    display: flex;
+}
+.contacts {
+    padding-right: 108px;
+}
+#search {
+    padding-right: 4px;
+}
+#loupe {
+    height: 17px;
+}
+.header_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.header_title {
+    max-width: 568px;
+    max-height: 343px;
+
+}
+.call {
+    color: var(--accent-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: left;
+    width: 568px;
+    height: 61px;
+    margin-top: 0px;
+    margin-bottom: 10px;    
+    }
+.meaning {
+    color:var(--dark-color);
+    flex-direction: ;
+    font-size: 25px;
+    font-weight: 400;
+    width: 483px;
+    height: 90px;
+    margin-top: 0px;
+    margin-bottom: 103px;
+}
+.go {
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    display: inline-flex;
+    padding: 12px 31px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-width: 0px;
+    border-radius: 100px;
+    background: #4182FA;
+    box-shadow: 0px 4px 36px 0px rgba(0, 90, 255, 0.60);    
+}
+.graduation_cap > img {
+    width: 467px;
+    height: 448px;
+}
+/* BODY */
+.main {
+
+}

@@ -14,22 +14,39 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header_title">
-                <button cLass="logo">
-                    <img src="img/logo.svg" alt="VuzHub" cLass="logo">
-                </button>
-                <button cLass="contacts">
-                    <a href="@">Контакты</a>
-                </button>
-                <button cLass="search">
-                    <a href="@">Поиск</a>
-                </button>
+            <div class="nav">              
+                <img src="img/logo.svg" alt="VuzHub" cLass="logo">
+                <div class="inf text-main">
+                    <a class="contacts" href="@">Контакты</a>
+                    <div class="search">
+                        <a id="search" href="@">Поиск</a>
+                        <img id="loupe" src="/img/loupe.svg" alt="">
+                    </div>
+                </div>
+                    
+                    
+                    
             </div>
-            <h1 class="h1">Поступи в вуз мечты</h1>
-            <h4 cLass="h4">Сервис, помогающий абитуриентам поступить в высшие учебные заведения Санкт-Петербурга</h4>
-            <img src="img/graduation_cap.png" alt="Picture">
-            <div>
+            <div class="header_content">
+                <div class="header_title">
+                    <h1 class="call">Поступи в вуз мечты</h1>
+                    <h4 cLass=".text-main meaning">Сервис, помогающий абитуриентам 
+                        поступить в высшие учебные заведения Санкт-Петербурга</h4>
+                    <button class="go">
+                        <a href="@">Поступить</a>
+                    </button>
+                </div>
+                <div class="graduation_cap">
+                    <img src="img/graduation_cap.png" alt="Picture">
+                </div>
+            </div>
+        </div>
     </header>
+
+    <main class="main"></main>
+
+    <footer></footer>
+
 </body>
 
 </html>
