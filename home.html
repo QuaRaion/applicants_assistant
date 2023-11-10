@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Site</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">              
+                <img src="img/logo.svg" alt="VuzHub" cLass="logo" onclick="location.href='home.html'">
+                <div class="inf text-main">
+                    <a class="contacts" href="#team">Контакты</a>
+                    <div class="search">
+                        <a id="search" href="@">Поиск</a>
+                        <img id="loupe" src="/img/loupe.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="header_content">
+                <div class="header_title">
+                    <h1 class="call">Поступи в вуз мечты</h1>
+                    <h4 cLass=".text-main meaning">Сервис, помогающий абитуриентам 
+                        поступить в высшие учебные заведения Санкт-Петербурга</h4>
+                    <button class="go" onclick="location.href='exams.html'">
+                        <h>Поступить</h>
+                    </button>
+                </div>
+                <div class="graduation_cap">
+                    <img src="img/graduation_cap.png" alt="Picture" width="500">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="main_content">
+                <h1 class="text-h2 title2">Что мы можем тебе предложить?</h1>
+                <div class="offers">
+                    <button class="offer" onclick="location.href='exams.html'">
+                        <img src="img/dice.png" alt="Picture" class="offer_img">
+                        <h4 class="text-h3 offer_text">Вероятность<br>поступления</h4>
+                    </button>
+                    <button class="offer" onclick="location.href='universities.html'">
+                        <img class="offer_img" src="img/memo.png" alt="Picture">
+                        <h4 class="text-h3 offer_text">Информация<br>о вузах</h4>
+                    </button>
+                    <button class="offer" onclick="location.href='calendar.html'">
+                        <img src="img/calendar.png" alt="Picture" class="offer_img">
+                        <h4 class="text-h3 offer_text">Информация<br>о поступлении</h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_left">
+                    <div class="text-h3 comanda">Команда</div>
+                    <div class="text-main team" id="team">
+                        <a class="vk" href="https://vk.com/fast_s_fck" target="_blank">Макаров Никита</a>
+                        <a class="vk" href="https://vk.com/i_sherz" target="_blank">Махкамов Шерзод</a>
+                        <a class="vk" id="last_vk" href="https://vk.com/id385033240" target="_blank">Мостовой Александр</a>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <h class="text-main company">&copy; Группа 4217 ГУАП. 2023-2024</h>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
