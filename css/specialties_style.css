@@ -32,12 +32,14 @@ body {
     --green-color: #4BD25F;
     --yellow-color: #FFD644;
     --red-color: #FF6745;
+    --black-red-color: #A71E1E;
 }
 /* Основной текст */
 .text-main {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 25px;
+
 }
 /* Текст-заголовок */
 .text-h2 {
@@ -66,7 +68,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 115px;
+    margin-bottom: 50px;
 }
 .logo {
     width: 179px;
@@ -91,93 +93,122 @@ body {
     align-items: flex-start;
     justify-content: space-between;
 }
-.header_title {
-    max-width: 568px;
-    max-height: 343px;
-}
-.call {
-    color: var(--accent-color);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: left;
-    width: 568px;
-    height: 61px;
-    margin-top: 0px;
-    margin-bottom: 10px;    
-    }
-.meaning {
-    color:var(--dark-color);
-    font-size: 25px;
-    font-weight: 400;
-    width: 483px;
-    height: 90px;
-    margin-top: 0px;
-    margin-bottom: 103px;
-}
-.go {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    width: 320px;
-    height: 80px;
-    border: 0px;
-    border-radius: 100px;
-    background: var(--accent-color);
-    box-shadow: 0px 4px 36px 0px rgba(0, 90, 255, 0.50);   
-}
-#go {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-weight: 700;
-    font-size: 45px;
-}
-.graduation_cap {
-    width: 500px;
-    height: 432px;
-}
 
 /* --- MAIN --- */
-.main {
-    background: var(--accent-color);
-}
-.main_content{
-    height: 675px;
-    padding-top: 82px;
-}
-.title2 {
-    color: #FFF;
+.title {
+    color: var(--accent-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     margin-top: 0px;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
 }
-.offers {
+.meaning {
+    color:var(--dark-color);
+    margin-bottom: 50px;
+}
+.specialties {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    margin: 38px, 24px;
+    row-gap: 20px;
 }
-.offer {
+.specialty {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 292px;
-    margin: 38px, auto;
-    padding: 0px;
+    width: 520px;
+    height: 306px;
     flex-shrink: 0;
+    
     border: 0px;
     border-radius: 20px;
     background: #FFF;
-    box-shadow: 0px 4px 30px 5px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 4px 30px 5px rgba(0, 0, 0, 0.1);
 }
-.offer_img {
-    width: 120px;
-    height: 120px;
+.line {
+    background-color: var(--accent-color);
+    width: 520px;
+    height: 62px;
+    padding: 7px 0;
+    flex-shrink: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
-.offer_text {
-    padding-top: 35px;
+.spec_num {
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+.spec_content {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#spec_name {
+    margin: 20px 0;
+}
+/* .chance_bar {
+    width: 400px;
+    position: relative;
+    -webkit-appearance: none;
+    border-radius: 30px;
+} */
+meter {
+    width: 460px;
+    border-radius: 30px;
+    text-align: center;
+   }
+meter::-webkit-meter-bar {
+    height: 16px;
+    border: 2px solid var(--accent-color); 
+    background: #ffffff;
+}
+meter::-webkit-meter-optimum-value {
+    background: var(--green-color);
+}
+meter::-webkit-meter-suboptimum-value {
+    background: var(--yellow-color);
+}
+meter::-webkit-meter-even-less-good-value {
+    background: var(--red-color);
+}
+.chance_bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+}
+.text {
+    display: flex;
+    justify-content: space-between;
+}
+
+#subtext {
     color: var(--dark-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
+#subtext_chance {
+    color: var(--green-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
 /* --- FOOTER ---*/
 .footer_content {
     display: flex;
@@ -213,4 +244,8 @@ body {
 }
 .company {
     color: var(--dark-color);
+}
+.russian{
+    color: #f80c0c;
+    
 }
