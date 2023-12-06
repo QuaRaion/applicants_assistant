@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/exams_style.css">
+    <title>VuzHub</title>
 </head>
+
 <body>
-    <h1>Экзамены</h1>
+    <header class="header">
+        <div class="container">
+            <div class="nav">              
+                <img src="img/logo.svg" alt="VuzHub" cLass="logo" onclick="location.href='home.html'">
+                <div class="inf text-main">
+                    <a class="contacts" href="#team">Контакты</a>
+                    <div class="search">
+                        <a id="search" href="@">Поиск</a>
+                        <img id="loupe" src="/img/loupe.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="main_content">
+                <div class="main_title">
+                    <div class="title">Поиск вуза</div>
+                    <div cLass="text-main meaning">Укажи свои баллы ЕГЭ по предметам, которые сдавал</div>
+                </div>
+                <form class="exam_scores">
+                    <div class="input_exam">                    
+                        <input type="number" name="russian" placeholder="Русский язык">     
+                        <input type="number" name="russian" placeholder="Физика">
+                        <input type="number" name="russian" placeholder="Литература">
+                        <input type="number" name="russian" placeholder="История">
+                        <input type="number" name="russian" placeholder="Математика">
+                        <input type="number" name="russian" placeholder="Химия">
+                        <input type="number" name="russian" placeholder="География">
+                        <input type="number" name="russian" placeholder="Обществознание">
+                        <div class="last__row">
+                            <input type="number" name="russian" placeholder="Информатика">
+                            <input type="number" name="russian" placeholder="Биология">
+                            <input type="number" name="russian" placeholder="Английский язык">
+                        </div>
+                    </div>
+                         
+                    
+                    <input type="submit button" class="find" value="Подобрать" onclick="location.href='universities.html'" >
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_left">
+                    <div class="text-h3 comanda">Команда</div>
+                    <div class="text-main team" id="team">
+                        <a class="vk" href="https://vk.com/fast_s_fck" target="_blank">Макаров Никита</a>
+                        <a class="vk" href="https://vk.com/i_sherz" target="_blank">Махкамов Шерзод</a>
+                        <a class="vk" id="last_vk" href="https://vk.com/id385033240" target="_blank">Мостовой Александр</a>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <h class="text-main company">&copy; Группа 4217 ГУАП. 2023-2024</h>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
