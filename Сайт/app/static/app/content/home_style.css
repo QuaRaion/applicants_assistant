@@ -1,0 +1,211 @@
+html {
+    box-sizing: border-box;
+}
+*,* ::before, *::after {
+    box-sizing: inherit;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: unset;
+}
+button{
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.container {
+    max-width: 1060px;
+    margin: 0 auto;
+
+}
+:root {
+    --accent-color: #4182FA;
+    --dark-color: #2D2D2D;
+    --green-color: #4BD25F;
+    --yellow-color: #FFD644;
+    --red-color: #FF6745;
+}
+/* Основной текст */
+.text-main {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+/* Текст-заголовок */
+.text-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+/* Текст в карточках предложений на 1 странице*/
+.text-h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    margin: 0px;
+    width: auto;
+    padding-bottom: 0px;
+}
+/* Текст в направлениях */
+.text-h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+/* --- HEADER --- */
+.nav {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 115px;
+}
+.logo {
+    width: 179px;
+    height: 38px;
+    cursor: pointer;
+}
+.inf {
+    color: var(--dark-color);
+    display: flex;
+}
+.contacts {
+    margin-right: 108px;
+}
+#search {
+    padding-right: 4px;
+}
+#loupe {
+    height: 17px;
+}
+.header_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.header_title {
+    max-width: 568px;
+    max-height: 343px;
+    padding-right: 10px;
+}
+.call {
+    color: var(--accent-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: left;
+    width: 568px;
+    height: 61px;
+    margin-top: 0px;
+    margin-bottom: 10px;    
+    }
+.meaning {
+    color:var(--dark-color);
+    font-size: 25px;
+    font-weight: 400;
+    width: 483px;
+    height: 90px;
+    margin-top: 0px;
+    margin-bottom: 103px;
+}
+.go {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    padding: 12px 31px;
+    justify-content: center;
+    align-items: center;
+    width: 321px;
+    height: 79px;
+    border-width: 0px;
+    border-radius: 100px;
+    background: var(--accent-color);
+    box-shadow: 0px 4px 36px 0px rgba(0, 90, 255, 0.60);   
+}
+.graduation_cap > img {
+    width: 467px;
+    height: 448px;
+}
+/* --- MAIN --- */
+.main {
+    background: var(--accent-color);
+}
+.main_content{
+    height: 675px;
+    padding-top: 82px;
+}
+.title2 {
+    color: #FFF;
+    margin-top: 0px;
+    margin-bottom: 80px;
+}
+.offers {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 38px, 24px;
+}
+.offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 292px;
+    margin: 38px, auto;
+    padding: 0px;
+    flex-shrink: 0;
+    border: 0px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 5px rgba(0, 0, 0, 0.20);
+}
+.offer_img {
+    width: 120px;
+    height: 120px;
+}
+.offer_text {
+    padding-top: 35px;
+    color: var(--dark-color);
+}
+/* --- FOOTER ---*/
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer_left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.comanda {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+.team {
+    color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.vk {
+    margin-bottom: 5px;
+}
+#last_vk{
+    margin-bottom: 0px;
+}
+.footer_right {
+    padding: 0px;
+    margin: 0px;
+}
+.company {
+    color: var(--dark-color);
+}

@@ -35,25 +35,24 @@
                     <div class="title">Поиск вуза</div>
                     <div cLass="text-main meaning">Укажи свои баллы ЕГЭ по предметам, которые сдавал</div>
                 </div>
-                <form class="exam_scores" autocomplete="off">
+                <form class="exam_scores" action="" method="post" autocomplete="off">
                     <div class="input_exam">                    
                         <input type="number" name="russian" placeholder="Русский язык">     
-                        <input type="number" name="russian" placeholder="Физика">
-                        <input type="number" name="russian" placeholder="Литература">
-                        <input type="number" name="russian" placeholder="История">
-                        <input type="number" name="russian" placeholder="Математика">
-                        <input type="number" name="russian" placeholder="Химия">
-                        <input type="number" name="russian" placeholder="География">
-                        <input type="number" name="russian" placeholder="Обществознание">
+                        <input type="number" name="physics" placeholder="Физика">
+                        <input type="number" name="literature" placeholder="Литература">
+                        <input type="number" name="history" placeholder="История">
+                        <input type="number" name="math" placeholder="Математика">
+                        <input type="number" name="chemistry" placeholder="Химия">
+                        <input type="number" name="geography" placeholder="География">
+                        <input type="number" name="socialstudies" placeholder="Обществознание">
                         <div class="last__row">
-                            <input type="number" name="russian" placeholder="Информатика">
-                            <input type="number" name="russian" placeholder="Биология">
-                            <input type="number" name="russian" placeholder="Английский язык">
+                            <input type="number" name="informatics" placeholder="Информатика">
+                            <input type="number" name="biology" placeholder="Биология">
+                            <input type="number" name="inglish" placeholder="Английский язык">
                         </div>
                     </div>
-                         
-                    
-                    <input type="submit button" class="find" value="Подобрать" onclick="location.href='universities.html'" >
+                    <!--Для отправки формы на сервер замени тип тега <button> на "submit". Можно удалить метод onclick, он не понадобится-->
+                    <button type="button" onclick="location.href='universities.html'" class="find">Подобрать</button>
                 </form>
 
             </div>

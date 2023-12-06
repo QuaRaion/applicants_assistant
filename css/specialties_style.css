@@ -76,11 +76,12 @@ body {
     cursor: pointer;
 }
 .inf {
-    color: var(--dark-color);
     display: flex;
+    align-items: center;
 }
 .contacts {
     margin-right: 108px;
+    color: var(--dark-color);
 }
 #search {
     padding-right: 4px;
@@ -114,6 +115,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 20px;
+    margin-bottom: 40px;
 }
 .specialty {
     display: flex;
@@ -154,12 +156,7 @@ body {
 #spec_name {
     margin: 20px 0;
 }
-/* .chance_bar {
-    width: 400px;
-    position: relative;
-    -webkit-appearance: none;
-    border-radius: 30px;
-} */
+
 meter {
     width: 460px;
     border-radius: 30px;
@@ -185,10 +182,7 @@ meter::-webkit-meter-even-less-good-value {
     flex-wrap: wrap;
     align-content: space-between;
     align-items: center;
-}
-.text {
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 16px;
 }
 
 #subtext {
@@ -196,10 +190,10 @@ meter::-webkit-meter-even-less-good-value {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
 }
-#subtext_chance {
+#chance_hight {
     color: var(--green-color);
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
@@ -207,7 +201,54 @@ meter::-webkit-meter-even-less-good-value {
     font-weight: 500;
     line-height: normal;
 }
+#chance_low {
+    color: var(--red-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+#chance_medium {
+    color: var(--yellow-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.min_scores {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.years {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.years__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.year {
+    margin-right: 42px;
+}
+#min1,
+#min2 {
+    color: var(--Accent, #4182FA);    
+}
 
+.disciplines {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.exams_set {
+    font-weight: 500;
+}
 
 /* --- FOOTER ---*/
 .footer_content {
@@ -244,8 +285,4 @@ meter::-webkit-meter-even-less-good-value {
 }
 .company {
     color: var(--dark-color);
-}
-.russian{
-    color: #f80c0c;
-    
 }
