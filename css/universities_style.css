@@ -34,6 +34,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 25px;
+
 }
 /* Текст-заголовок */
 .text-h2 {
@@ -62,7 +63,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 115px;
+    margin-bottom: 50px;
 }
 .logo {
     width: 179px;
@@ -87,92 +88,71 @@ body {
     align-items: flex-start;
     justify-content: space-between;
 }
-.header_title {
-    max-width: 568px;
-    max-height: 343px;
-    padding-right: 10px;
-}
-.call {
+
+/* --- MAIN --- */
+.title {
     color: var(--accent-color);
     font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
+    font-style: normal;
     font-weight: 700;
-    text-align: left;
-    width: 568px;
-    height: 61px;
+    line-height: normal;
     margin-top: 0px;
-    margin-bottom: 10px;    
-    }
+    margin-bottom: 10px;
+}
 .meaning {
     color:var(--dark-color);
-    font-size: 25px;
-    font-weight: 400;
-    width: 483px;
-    height: 90px;
-    margin-top: 0px;
-    margin-bottom: 103px;
+    margin-bottom: 50px;
 }
-.go {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 45px;
-    font-weight: 700;
-    padding: 12px 31px;
-    justify-content: center;
-    align-items: center;
-    width: 321px;
-    height: 79px;
-    border-width: 0px;
-    border-radius: 100px;
-    background: var(--accent-color);
-    box-shadow: 0px 4px 36px 0px rgba(0, 90, 255, 0.60);   
-}
-.graduation_cap > img {
-    width: 467px;
-    height: 448px;
-}
-/* --- MAIN --- */
-.main {
-    background: var(--accent-color);
-}
-.main_content{
-    height: 675px;
-    padding-top: 82px;
-}
-.title2 {
-    color: #FFF;
-    margin-top: 0px;
-    margin-bottom: 80px;
-}
-.offers {
+.universities {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    margin: 38px, 24px;
+    row-gap: 20px;
 }
-.offer {
+.university {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 292px;
-    margin: 38px, auto;
-    padding: 0px;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 340px;
+    height: 337px;
+    padding-top: 44px;
     flex-shrink: 0;
     border: 0px;
     border-radius: 20px;
     background: #FFF;
-    box-shadow: 0px 4px 30px 5px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.15);
 }
-.offer_img {
-    width: 120px;
-    height: 120px;
+.line {
+    background-color: var(--accent-color);
+    width: 340px;
+    height: 62px;
+    padding: 7px 0 7px 0;
+    flex-shrink: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
-.offer_text {
-    padding-top: 35px;
-    color: var(--dark-color);
+.univ_img {
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0; 
+
+
 }
+.univ_text {
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+
 /* --- FOOTER ---*/
 .footer_content {
     display: flex;
@@ -208,4 +188,8 @@ body {
 }
 .company {
     color: var(--dark-color);
+}
+.russian{
+    color: #f80c0c;
+    
 }
