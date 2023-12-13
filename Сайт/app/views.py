@@ -6,6 +6,12 @@ from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
 
+
+def chance_of_admission(o:int, t:int, s:int, m:int, n:int):
+    p:float =(o/t)*((s-n)/(m-n))*100
+    return p
+
+
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
@@ -65,8 +71,6 @@ def specialties(request):
         request,
         'app/specialties.html',
         {
-            'title':'About',
-            'message':'Your application description page.',
-            'year':datetime.now().year,
+            'value': chance_of_admission(100, 50, 270, 250, 300),
         }
     )

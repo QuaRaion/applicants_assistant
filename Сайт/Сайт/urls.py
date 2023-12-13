@@ -19,10 +19,9 @@ urlpatterns = [
     path('exams/', views.exams, name='exams'),
     path('universities/', views.universities, name='universities'),
     path('calendar/', views.calendar, name='calendar'),
-    path('universities/specialties/', views.specialties, name='specialties'),
+    path('universities/specialties', views.specialties, name='specialties'),
     path('exams/universities', views.universities, name='universities'),
-    path('exams/home', views.home, name='home'),
-    path('exams/specialties/', views.specialties, name='specialties')
+    path('exams/specialties', views.specialties, name='specialties')
     ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
