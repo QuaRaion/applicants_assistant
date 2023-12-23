@@ -1,6 +1,7 @@
+{% extends 'app/base.html' %}
+{% block head %}
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,91 +10,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" href="{% static '../static/app/content/universities_style.css' %}">
-    <title>VuzHub</title>
+    <title>Университеты</title>
 </head>
+{% endblock %}
 
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="nav">              
-                <img src="../static/app/content/img/logo.svg" alt="VuzHub" cLass="logo" onclick="location.href='/home'">
-                <div class="inf text-main">
-                    <a class="contacts" href="#team">Контакты</a>
-                    <div class="search">
-                        <a id="search" href="@">Поиск</a>
-                        <img id="loupe" src="../static/app/content/img/loupe.svg" alt="">
+{% block content %}
+<main class="main">
+    <div class="container">
+        <div class="main_content">
+            <div class="main_title">
+                <div class="title">Высшие учебные заведения</div>
+                <div cLass="text-main meaning">Подборка подходящих вузов</div>
+            </div>
+            <div class="universities">
+                <button class="university" onclick="location.href='specialties'">
+                    <img src="../static/app/content/img/univer_logo/guap.svg" alt="Picture" class="univ_img">
+                    <div class="line">
+                        <h4 class="univ_text">ГУАП</h4>
                     </div>
-                </div>
-            </div>
-            
-        </div>
-    </header>
-
-    <main class="main">
-        <div class="container">
-            <div class="main_content">
-                <div class="main_title">
-                    <div class="title">Высшие учебные заведения</div>
-                    <div cLass="text-main meaning">Подборка подходящих вузов</div>
-                </div>
-                <div class="universities">
-                    <button class="university" onclick="location.href='specialties'">
-                        <img src="../static/app/content/img/univer_logo/guap.svg" alt="Picture" class="univ_img">
-                        <div class="line">
-                            <h4 class="univ_text">ГУАП</h4>
-                        </div>
-                    </button>
-                    <button class="university" onclick="location.href='specialties'">
-                        <img src="../static/app/content/img/univer_logo/politech.svg" alt="Picture" class="univ_img">
-                        <div class="line">
-                            <h4 class="univ_text">Политех</h4>
-                        </div>
-                    </button>
-                    <button class="university" onclick="location.href='specialties'">
-                        <img src="../static/app/content/img/univer_logo/itmo.svg" alt="Picture" class="univ_img">
-                        <div class="line">
-                            <h4 class="univ_text">ИТМО</h4>
-                        </div>
-                    </button>
-                    <button class="university" onclick="location.href='specialties'">
-                        <img src="../static/app/content/img/univer_logo/spbgut.svg" alt="Picture" class="univ_img">
-                        <div class="line">
-                            <h4 class="univ_text">СПБГУТ</h4>
-                        </div>
-                    </button>
-                    <button class="university" onclick="location.href='specialties'">
-                        <img src="../static/app/content/img/univer_logo/spbgu.svg" alt="Picture" class="univ_img">
-                        <div class="line">
-                            <h4 class="univ_text">СПБГУ</h4>
-                        </div>
-                    </button>
-                    <button class="university" onclick="location.href='specialties'">
-                        <img src="../static/app/content/img/univer_logo/leti.svg" alt="Picture" class="univ_img">
-                        <div class="line">
-                            <h4 class="univ_text">ЛЭТИ</h4>
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer_content">
-                <div class="footer_left">
-                    <div class="text-h3 comanda">Команда</div>
-                    <div class="text-main team" id="team">
-                        <a class="vk" href="https://vk.com/fast_s_fck" target="_blank">Макаров Никита</a>
-                        <a class="vk" href="https://vk.com/i_sherz" target="_blank">Махкамов Шерзод</a>
-                        <a class="vk" id="last_vk" href="https://vk.com/id385033240" target="_blank">Мостовой Александр</a>
+                </button>
+                <button class="university" onclick="location.href='specialties'">
+                    <img src="../static/app/content/img/univer_logo/politech.svg" alt="Picture" class="univ_img">
+                    <div class="line">
+                        <h4 class="univ_text">Политех</h4>
                     </div>
-                </div>
-                <div class="footer_right">
-                    <h class="text-main company">&copy; Группа 4217 ГУАП. 2023-2024</h>
-                </div>
+                </button>
+                <button class="university" onclick="location.href='specialties'">
+                    <img src="../static/app/content/img/univer_logo/itmo.svg" alt="Picture" class="univ_img">
+                    <div class="line">
+                        <h4 class="univ_text">ИТМО</h4>
+                    </div>
+                </button>
+                <button class="university" onclick="location.href='specialties'">
+                    <img src="../static/app/content/img/univer_logo/spbgut.svg" alt="Picture" class="univ_img">
+                    <div class="line">
+                        <h4 class="univ_text">СПБГУТ</h4>
+                    </div>
+                </button>
+                <button class="university" onclick="location.href='specialties'">
+                    <img src="../static/app/content/img/univer_logo/spbgu.svg" alt="Picture" class="univ_img">
+                    <div class="line">
+                        <h4 class="univ_text">СПБГУ</h4>
+                    </div>
+                </button>
+                <button class="university" onclick="location.href='specialties'">
+                    <img src="../static/app/content/img/univer_logo/leti.svg" alt="Picture" class="univ_img">
+                    <div class="line">
+                        <h4 class="univ_text">ЛЭТИ</h4>
+                    </div>
+                </button>
             </div>
         </div>
-    </footer>
-
-</body>
+    </div>
+</main>
+{% endblock %}

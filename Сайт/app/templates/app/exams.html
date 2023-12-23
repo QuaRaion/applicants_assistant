@@ -1,6 +1,7 @@
+{% extends 'app/base.html' %}
+{% block head %}
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,76 +10,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" href="{% static '../static/app/content/exams_style.css' %}">
-    <title>VuzHub</title>
+    <title>Баллы за ЕГЭ</title>
 </head>
+ {% endblock %}
 
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="nav">              
-                <img src="../static/app/content/img/logo.svg" alt="VuzHub" cLass="logo" onclick="location.href='/home'">
-                <div class="inf text-main">
-                    <a class="contacts" href="#team">Контакты</a>
-                    <div class="search">
-                        <a id="search" href="@">Поиск</a>
-                        <img id="loupe" src="../static/app/content/img/loupe.svg" alt="">
+{% block content %}
+<main class="main">
+    <div class="container">
+        <div class="main_content">
+            <div class="main_title">
+                <div class="title">Поиск вуза</div>
+                <div cLass="text-main meaning">Укажи свои баллы ЕГЭ по предметам, которые сдавал</div>
+            </div>
+            <form class="exam_scores" action="" method="POST" autocomplete="off">
+                {% csrf_token %}
+                <div class="input_exam">
+                    <input type="number" name="russian" id="russian" placeholder="Русский язык">
+                    <input type="number" name="physics" id="physics" placeholder="Физика">
+                    <input type="number" name="literature" id="literature" placeholder="Литература">
+                    <input type="number" name="history" id="history" placeholder="История">
+                    <input type="number" name="math" id="math" placeholder="Математика">
+                    <input type="number" name="chemistry" id="chemistry" placeholder="Химия">
+                    <input type="number" name="geography" id="geography" placeholder="География">
+                    <input type="number" name="socialstudies" id="socialstudies" placeholder="Обществознание">
+                    <div class="last__row">
+                        <input type="number" name="informatics" id="informatics" placeholder="Информатика">
+                        <input type="number" name="biology" id="biology" placeholder="Биология">
+                        <input type="number" name="english" id="english" placeholder="Английский язык">
                     </div>
                 </div>
-            </div>
-            
+                <input type="submit" class="find" onclick="location.href='universities'" value="Подобрать">
+                <!--Для отправки формы на сервер замени тип тега <button> на "submit". Можно удалить метод onclick, он не понадобится-->
+                <!--                <button type="button" onclick="location.href='universities.html'" class="find">Подобрать</button>-->
+            </form>
+
+            <!--            <form method="POST">-->
+            <!--                {% csrf_token %}-->
+            <!--                <table>-->
+            <!--                    {{ form }}-->
+            <!--                </table>-->
+            <!--                <input type="button" onclick="location.href='{% url 'universities' %}'" value="Подобрать">-->
+            <!--            </form>-->
+
         </div>
-    </header>
-
-    <main class="main">
-        <div class="container">
-            <div class="main_content">
-                <div class="main_title">
-                    <div class="title">Поиск вуза</div>
-                    <div cLass="text-main meaning">Укажи свои баллы ЕГЭ по предметам, которые сдавал</div>
-                </div>
-                <form class="exam_scores" autocomplete="off">
-                    <div class="input_exam">                    
-                        <input type="number" name="russian" placeholder="Русский язык">     
-                        <input type="number" name="russian" placeholder="Физика">
-                        <input type="number" name="russian" placeholder="Литература">
-                        <input type="number" name="russian" placeholder="История">
-                        <input type="number" name="russian" placeholder="Математика">
-                        <input type="number" name="russian" placeholder="Химия">
-                        <input type="number" name="russian" placeholder="География">
-                        <input type="number" name="russian" placeholder="Обществознание">
-                        <div class="last__row">
-                            <input type="number" name="russian" placeholder="Информатика">
-                            <input type="number" name="russian" placeholder="Биология">
-                            <input type="number" name="russian" placeholder="Английский язык">
-                        </div>
-                    </div>
-                         
-                    
-                    <input type="submit button" class="find" value="Подобрать" onclick="location.href='universities'" >
-                </form>
-
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer_content">
-                <div class="footer_left">
-                    <div class="text-h3 comanda">Команда</div>
-                    <div class="text-main team" id="team">
-                        <a class="vk" href="https://vk.com/fast_s_fck" target="_blank">Макаров Никита</a>
-                        <a class="vk" href="https://vk.com/i_sherz" target="_blank">Махкамов Шерзод</a>
-                        <a class="vk" id="last_vk" href="https://vk.com/id385033240" target="_blank">Мостовой Александр</a>
-                    </div>
-                </div>
-                <div class="footer_right">
-                    <h class="text-main company">&copy; Группа 4217 ГУАП. 2023-2024</h>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+    </div>
+</main>
+{% endblock %}
