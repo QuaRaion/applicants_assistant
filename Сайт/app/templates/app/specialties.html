@@ -1,11 +1,69 @@
+{% extends 'app/base.html' %}
+
+{% block head %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '../static/app/content/specialties_style.css' %}">
+    <title>Специальности</title>
 </head>
-<body>
-    <h1>Специальности</h1>
-</body>
-</html>
+{% endblock %}
+
+{% block content %}
+<main class="main">
+    <div class="container">
+        <div class="main_content">
+            <div class="main_title">
+                <div class="title">Направления подготовки</div>
+                <div cLass="text-main meaning">
+                    Подборка подходящих направлений подготовки<br>
+                    и вероятность попасть на бюджетное место*
+                </div>
+            </div>
+
+            <div class="specialties">
+                <div class="specialty">
+                    {% for spec in specs %}
+                    <div class="line">
+                        <h2 class="spec_num">{{ spec.number }}</h2>
+                    </div>
+                    <div class="spec_content">
+                        <h3 class="text-main" id="spec_name">{{ spec.name }}</h3>
+                        <div class="bar">
+                            <div class="chance_bar">
+                                <meter min="0" low="33" high="66" max="100" optimum="100" value="{{ spec.probability }}"></meter>
+                                <h6 id="subtext">вероятность</h6>
+                                <h6 id="chance_hight">{{ spec.chance }}</h6>
+                            </div>
+                            <div class="min_scores">
+                                <h4 class="text-h4">проходные баллы</h4>
+                                <div class="years">
+                                    <div class="years__flex">
+                                        <h4 class="text-h4 year">2022</h4>
+                                        <h4 class="text-h4" id="min1">{{ spec.min_score_1 }}</h4>
+                                    </div>
+                                    <div class="years__flex">
+                                        <h4 class="text-h4 year">2023</h4>
+                                        <h4 class="text-h4" id="min2">{{ spec.min_score_2 }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="disciplines">
+                                <h4 class="text-h4">необходимые ЕГЭ</h4>
+                                <h4 class="text-h4 exams_set">{{ spec.exams }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <h4 class="text-main meaning">*мы не гарантируем достоверность наших вычислений</h4>
+</main>
+{% endblock %}

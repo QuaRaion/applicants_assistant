@@ -1,11 +1,87 @@
+{% extends 'app/base.html' %}
+{% block head %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '../static/app/content/calendar_style.css' %}">
+    <title>Календарь приемной кампании</title>
 </head>
-<body>
-    <h1>Календарь приемной кампании</h1>
-</body>
-</html>
+{% endblock %}
+
+{% block content %}
+<main class="main">
+    <div class="container">
+        <div class="main_content">
+            <div class="main_title">
+                <div class="title">Календарь приемной кампании*</div>
+                <div cLass="text-main meaning">
+                    Даты актуальны для направлений
+                    очной бюджетной формы обучения
+                </div>
+            </div>
+            <div class="calendar">
+                <div class="date text-h4-2">
+                    <!-- Элементы календаря (одна строка) -->
+                    <button class="day">20 июня</button>
+                    <div class="day_inf text-h4-2">
+                        начало приема документов <span class="time">(с 10:00)</span>
+                    </div>
+                </div>
+                <div class="date text-h4-2">
+                    <!-- Элементы календаря (одна строка) -->
+                    <button class="day">26 июня</button>
+                    <div class="day_inf text-h4-2">начало вступительных испытаний</div>
+                </div>
+                <div class="date text-h4-2">
+                    <!-- Элементы календаря (одна строка) -->
+                    <button class="day">10 июля</button>
+                    <div class="day_inf text-h4-2">
+                        завершение приема документов по результатам<br>
+                        вступительных испытаний <span class="time">(до 18:00)</span>
+                    </div>
+                </div>
+                <div class="date text-h4-2">
+                    <!-- Элементы календаря (одна строка) -->
+                    <button class="day">25 июля</button>
+                    <div class="day_inf text-h4-2">
+                        завершение приема документов без сдачи<br>
+                        вступительных испытаний <span class="time">(до 18:00) </span>
+                    </div>
+                </div>
+                <div class="date text-h4-2">
+                    <!-- Элементы календаря (одна строка) -->
+                    <button class="day">27 июля</button>
+                    <div class="day_inf text-h4-2">публикация конкурсных списков</div>
+                </div>
+                <div class="date text-h4-2">
+                    <!-- Элементы календаря (одна строка) -->
+                    <button class="day">31 июля</button>
+                    <div class="day_inf text-h4-2">
+                        публикация конкурсных списков после<br>
+                        приоритетного зачисления
+                    </div>
+                </div>
+                <div class="date text-h4-2">
+                    <!-- Элементы календаря (одна строка) -->
+                    <button class="day">3 августа</button>
+                    <div class="day_inf text-h4-2">
+                        последний день подачи оригинала документа<br>
+                        об образовании <span class="time">(до 12:00)</span>
+                    </div>
+                </div>
+                <div class="date text-h4-2">
+                    <!-- Элементы календаря (одна строка) -->
+                    <button class="day">9 августа</button>
+                    <div class="day_inf text-h4-2">публикация приказов о зачислении</div>
+                </div>
+            </div>
+
+            <h4 class="text-main meaning">*даты могут отличаться в зависимости от вуза</h4>
+</main>
+{% endblock %}

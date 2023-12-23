@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +7,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     {% load static %}
-    <link rel="stylesheet" href="{% static '../static/app/content/home_style.css' %}">
+
     <title>VuzHub</title>
+    <link rel="stylesheet" href="{% static '../static/app/content/home_style.css' %}">
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <div class="nav">              
-                <img src="../static/app/content/img/logo.svg" alt="VuzHub" cLass="logo" onclick="location.href='home'">
+            <div class="nav">
+                <img src="../static/app/content/img/logo.svg" alt="VuzHub" cLass="logo" onclick="location.href='/home'">
                 <div class="inf text-main">
                     <a class="contacts" href="#team">Контакты</a>
                     <div class="search">
-                        <a id="search" href="@">Поиск</a>
-                        <img id="loupe" src="../static/app/content/img/loupe.svg" alt="">
+                        <a id="search" target="_blank" href="https://yandex.ru/maps/2/saint-petersburg
+                            /category/university/184106140/?ll=30.320903%2C59.960639&sll=30.315635%2C59.938951&
+                            sspn=0.546570%2C0.196731&z=12">Карта</a>
+                        <img id="map" src="../static/app/content/img/map.svg" alt="Иконка карты">
                     </div>
                 </div>
             </div>
             <div class="header_content">
                 <div class="header_title">
                     <h1 class="call">Поступи в вуз мечты</h1>
-                    <h4 cLass=".text-main meaning">Сервис, помогающий абитуриентам 
-                        поступить в высшие учебные заведения Санкт-Петербурга</h4>
+                    <h4 cLass=".text-main meaning">
+                        Сервис, помогающий абитуриентам
+                        поступить в высшие учебные заведения Санкт-Петербурга
+                    </h4>
                     <button class="go" onclick="location.href='exams'">
                         <h>Поступить</h>
                     </button>
@@ -38,9 +42,9 @@
                     <img src="../static/app/content/img/graduation_cap.png" alt="Picture" width="500">
                 </div>
             </div>
+
         </div>
     </header>
-
     <main class="main">
         <div class="container">
             <div class="main_content">

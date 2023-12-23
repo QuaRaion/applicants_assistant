@@ -57,9 +57,12 @@
     <Folder Include="Сайт\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\static\app\content\calendar_style.css" />
     <Content Include="app\static\app\content\exams_style.css" />
     <Content Include="app\static\app\content\home_style.css" />
+    <Content Include="app\static\app\content\specialties_style.css" />
     <Content Include="app\static\app\content\universities_style.css" />
+    <Content Include="app\templates\app\base.html" />
     <Content Include="app\templates\app\calendar.html" />
     <Content Include="app\templates\app\exams.html" />
     <Content Include="app\templates\app\home.html" />
@@ -89,6 +92,7 @@
     <Content Include="app\static\app\scripts\respond.js" />
     <Content Include="app\static\app\scripts\respond.min.js" />
     <Content Include="app\static\app\scripts\_references.js" />
+    <Content Include="vuz_hub.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">
