@@ -33,12 +33,15 @@ def home(request):
         }
     )
 
-def exams (request):
-    return render(request, 'exams.html', )
+score: int = 0 
+
+# def exams (request):
+#     return render(request, 'exams.html', )
+
 def exams(request):
     """Renders the exams page."""
     assert isinstance(request, HttpRequest)
-    d: int =0
+    # d: int =0
     global score
     score = 0
     if request.method == 'POST':
@@ -64,11 +67,11 @@ def exams(request):
         # for exam in forms:
         #     score+= int(exam)
 
-        # score = int(russian) + int(physics) + int(literature) + int(history) + int(math) + int(chemistry) + int(geography) + int(socialstudies) + int(informatics) + int(biology) + int(english)
+        score = int(russian) + int(physics) + int(literature) + int(history) + int(math) + int(chemistry) + int(geography) + int(socialstudies) + int(informatics) + int(biology) + int(english)
             
-        for i in range (len(forms)):
-            if type(forms[i]) == type(d):
-                score+=forms[i]
+        # for i in range (len(forms)):
+        #     if type(forms[i]) == type(d):
+        #         score+=forms[i]
 
         if score > 300 or score < 0:
             form = ExamScoresForm()
@@ -131,20 +134,21 @@ def calendar(request):
         }
     )
 
-posts = [
+
+def specialties(request):
+    """Renders the specialties page."""
+    assert isinstance(request, HttpRequest)
+    posts = [
     {"number": "09.03.03",
     "name": "i",
-    "probability": chance_of_admission(234, 243, 60),
+    "probability": chance_of_admission(234, 243, score),
     "chance": "m",
     "min_score_1": 234,
     "min_score_2": 243,
     "exams": "m",
     }
 ]
-
-def specialties(request):
-    """Renders the specialties page."""
-    assert isinstance(request, HttpRequest)
+    
     return render(
         request,
         'app/specialties.html',
