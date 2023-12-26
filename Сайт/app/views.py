@@ -59,10 +59,12 @@ def exams(request):
         biology = request.POST['biology']
         english = request.POST['english']
         
+        requaired = []
         forms = [russian, physics, literature, history, math, chemistry, geography, socialstudies, informatics, biology, english]
+        
         # for i in range(len(forms)):
-        #     if forms[i] == 'None':
-        #         forms[i] = 0
+        #     if forms[i] != 0:
+        #         requaired.append = forms[i]
                 
         # for exam in forms:
         #     score+= int(exam)
